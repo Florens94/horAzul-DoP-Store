@@ -1,0 +1,28 @@
+
+.links {
+    color: #000000;
+      display:flex;
+      list-style-type:none;
+      margin:1em;
+      align-items:flex-start;
+    }
+    
+    .seccion{
+      color: #000000;
+      padding:2em;
+      width: 6em;
+      font-family: 'Courier New', Courier, monospace;
+      font-size:16px;
+      font-weight: bold;
+    }
+    
+    a, a:hover{
+      text-decoration: none;
+      color:#ff0663;
+    
+    }
+
+.nav {
+    justify-content:flex-end;
+    align-items: flex-end;
+}

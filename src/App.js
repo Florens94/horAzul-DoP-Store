@@ -1,16 +1,16 @@
-import logo from './logo.svg';
+
 import './App.css';
+import {NavBar} from './components/NavBar/navBar'
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h2>
-          Hora Azul
-        </h2>
-        <h3>DoP Store</h3>
+          <p className='appName'>Hora Azul <br/> DoP Store</p>
+        <NavBar />
       </header>
+
+
     </div>
   );
 }
