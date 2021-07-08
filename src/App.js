@@ -1,6 +1,8 @@
 
 import './App.css';
-import {NavBar} from './components/NavBar/navBar'
+import {NavBar} from './components/navBar/navBar'
+import ItemListContainer from './components/itemListContainer/itemListContainer'
+
 
 function App() {
   return (
@@ -9,8 +11,7 @@ function App() {
           <p className='appName'>Hora Azul <br/> DoP Store</p>
         <NavBar />
       </header>
-
-
+      <ItemListContainer greeting='bienvenidxs a la tienda virtual de lxs Directors of Photography'/>
     </div>
   );
 }
