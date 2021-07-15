@@ -21,7 +21,8 @@
   align-items: left ;
   justify-content: space-around;
   font-size: calc(10px + 2vmin);
-  color: #0079b2;
+  /* color: #0079b2; */
+  color:#AD3294;
   font-weight:bold;
 }
 
@@ -43,5 +44,5 @@
 }
 
 body {
-  background-color:#1a333f;
+  background-color:#544361;
 }
