@@ -1,13 +1,17 @@
 .count {
+    display: inline-block;
+    border: none;
+    border-radius: 4px;
+    justify-content: space-around;
     background-color:#000000;
     color:#FFFFFF;
     font-weight: bold;
     font-size: 24px;
-    align-items: center;
+    align-items:center;
     width: 30px;
     height: 30px;
-
 }
+
 
 .cuantity{
     color:#ecde9f;
