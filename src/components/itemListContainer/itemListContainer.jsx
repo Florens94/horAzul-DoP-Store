@@ -1,23 +1,71 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './itemListContainer.css'
-// import ItemCount from '../itemCount/itemCount'
-// import ItemList from '../itemList/itemList'
+import ItemCount from '../itemCount/itemCount'
+import ItemList from '../itemList/itemList'
 import {ItemDetailContainer} from '../itemDetailContainer/itemDetailContainer'
 
+const ItemListContainer = () => {
+    const [displayItems, setDisplayItems] = useState([]);
 
-function itemListContainer(props) {
+    const lensesArray =[
+        {
+            id: 0,
+            name: 'Canon',
+            detail: 'EF-S 24mm f/2.8 STM Lens',
+            price: '150 USD',
+            stock: '23',
+            img:'./img/canon24.jpeg'
+        },
+        {
+            id: 1,
+            name: 'Canon',
+            detail: 'EF 50mm f/1.4 USM Lens',
+            price: '399 USD',
+            stock: '12',
+            img: './img/canon50.jpeg'
+        },
+        {
+            id: 2,
+            name: 'Rokinon',
+            detail: '35mm f/1.4 AS UMC Lens for Canon EF',
+            price: '399 USD',
+            stock:'8',
+            img:'./img/rokinon35.jpeg'
+            
 
-    return (
-        <>
-        <h2 className='itemlist'>{props.greeting}</h2>
-        {/* <ItemCount stock={7} initial={1}/>
-        <ItemList/> */}
-        <ItemDetailContainer/>
+        }
 
-        </>
+    ]
 
-    )
+    const getItems = () => {
+        return new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                resolve(lensesArray);
+            }, 3000)
+        })
+    }
 
+    getItems().then((result)=> setDisplayItems(result))
+
+    return !displayItems.length ? <></> : <ItemList displayItems={displayItems}/>
+    
 }
 
-export default itemListContainer;
+export default ItemListContainer;
+
+// function itemListContainer(props) {
+
+//     return (
+//         <>
+//         <h2 className='itemlist'>{props.greeting}</h2>
+//         {/* <ItemCount stock={7} initial={1}/>
+//         <ItemList/> */}
+//         <ItemDetailContainer/>
+
+//         </>
+
+//     )
+
+// }
+
+// export default itemListContainer;

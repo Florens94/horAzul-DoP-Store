@@ -1,7 +1,6 @@
 import React, { useState, useEffect}from 'react'
 import ItemDetail from '../itemDetail/itemDetail'
-import { useParams } from 'react'
-
+import { useParams } from 'react-router-dom'
 
 export const ItemDetailContainer = ()=> {
 const lensesArray = [
@@ -31,25 +30,27 @@ const lensesArray = [
         
 
     }
-]
+];
 
-const [itemToDisplay, setItemToDisplay] = useState();
+const [itemToDisplay, setItemToDisplay] = useState([])
 
-const { id } = useParams();
+const {id: idParams} = useParams();
 
-const getItem = () => {
-    return new Promise((resolve)=>{
-    setTimeout(() =>{
-        resolve(lensesArray.find((lenses) => lenses.id.toString()===2))
-    }, 3000);
-})}
+const getSelectedItem = () => {
+    return new Promise((resolve) =>{
+        setTimeout(()=>{
+            resolve(lensesArray.find((item)=> item.id.toString() === idParams))
+        }, 2000)
+    })
+}
+useEffect(
+    () => {
+        setItemToDisplay()
+        getSelectedItem().then((result) => setItemToDisplay(result))
+    }, [idParams]);
 
-useEffect(() =>{
-    setItemToDisplay();
-    getItem().then((result)=> setItemToDisplay(result));
-},[id]);
-
-
-return (
-    <ItemDetail value={itemToDisplay}/>
-)}
+    return (
+        
+        <ItemDetail itemToDisplay={itemToDisplay}/>
+    );
+}

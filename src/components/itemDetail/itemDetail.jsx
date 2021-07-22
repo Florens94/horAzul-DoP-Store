@@ -1,10 +1,10 @@
 import React, { Fragment } from 'react'
 import ItemCount from '../itemCount/itemCount'
 
-const ItemDetail = ({ItemToDisplay: item}) =>{
+const ItemDetail = ({ItemToDisplay: item}) => {
     return (
         <Fragment>
-        <img src={item.img} alt={item.name} />
+        <img src={'/' + item.img} alt={item.name} />
         <div>
             <h1>{item.name}</h1>
             <p>{item.price}</p>

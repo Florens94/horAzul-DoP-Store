@@ -25,7 +25,7 @@ function ItemList () {
             name: 'Rokinon',
             detail: '35mm f/1.4 AS UMC Lens for Canon EF',
             price: '399 USD',
-            stock='8'
+            stock:'8',
             img:'./img/rokinon35.jpeg'
             
 
