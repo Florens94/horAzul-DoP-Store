@@ -17,10 +17,12 @@ function App() {
     <Route exact path="/">
       <Home/>
     </Route>
-    <Route path='/category/:categoryName'>
+    {/* <Route path='/category/:categoryName'>
           <Category/>
-        </Route>
+        </Route> */}
+
     <Route path="/">
+      <ItemListContainer/>
      
     </Route>
     {/* <div className="App">

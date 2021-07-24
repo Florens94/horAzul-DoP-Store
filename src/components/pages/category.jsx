@@ -16,8 +16,6 @@ export const Category = () =>  {
     const [finish, setFinish] = useState(false)
 
 
-
-
         useEffect(()=>{
         if (qty!== 0){
             setFinish(true)

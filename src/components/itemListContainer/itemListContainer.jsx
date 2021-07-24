@@ -7,7 +7,7 @@ import {ItemDetailContainer} from '../itemDetailContainer/itemDetailContainer'
 const ItemListContainer = () => {
     const [displayItems, setDisplayItems] = useState([]);
 
-    const lensesArray =[
+    const lenses =[
         {
             id: 0,
             name: 'Canon',
@@ -40,14 +40,14 @@ const ItemListContainer = () => {
     const getItems = () => {
         return new Promise((resolve,reject)=>{
             setTimeout(()=>{
-                resolve(lensesArray);
+                resolve(lenses);
             }, 3000)
         })
     }
 
     getItems().then((result)=> setDisplayItems(result))
 
-    return !displayItems.length ? <></> : <ItemList displayItems={displayItems}/>
+    return <ItemList products = {lenses}/>
     
 }
 

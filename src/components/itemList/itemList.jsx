@@ -1,6 +1,7 @@
 import { Fragment } from 'react';
 import {Item} from '../item/item'
 import './itemList.css';
+import ItemListContainer from '../itemListContainer/itemListContainer'
 
 function ItemList () {
     const lenses =[
@@ -49,15 +50,12 @@ function ItemList () {
         (lenses.map(lenses => (
             <Fragment>
                 <div className='lenses'>
-
                     <h2>{lenses.name}</h2>
                     <p>{lenses.detail}</p>
                     <h3>{lenses.price}</h3>
                     <img src={lenses.img} alt={lenses.name}/>
-
                 </div> 
-
-            <Item item={lenses.name} key={lenses.id}/>
+            {/* <Item item={lenses.name} key={lenses.id}/> */}
             </Fragment>
         )
             ))
