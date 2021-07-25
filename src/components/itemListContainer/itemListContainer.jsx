@@ -37,13 +37,28 @@ const ItemListContainer = () => {
 
     ]
 
+    const {catId} = useParams()
+
+    useEffect(()=>{
+        setDisplayItems([])
+    })
+
     const getItems = () => {
-        return new Promise((resolve,reject)=>{
+        return new Promise((resolve)=>{
             setTimeout(()=>{
-                resolve(lenses);
-            }, 3000)
+                if(catId) {
+                    let filteredList = lenses.filter((item)=> item.category === catId)
+                }
+            })
         })
     }
+    // const getItems = () => {
+    //     return new Promise((resolve,reject)=>{
+    //         setTimeout(()=>{
+    //             resolve(lenses);
+    //         }, 3000)
+    //     })
+    // }
 
     getItems().then((result)=> setDisplayItems(result))
 

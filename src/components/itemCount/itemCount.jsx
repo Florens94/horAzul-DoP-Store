@@ -1,25 +1,38 @@
 import React, {useState} from 'react';
 import './itemCount.css'
 
-function ItemCount ({stock, initial}) {
-
-    const [count, setCount] = useState(initial);
-
+const ItemCount = ({initial, stock, count, setCount}) => {
   const add = () => {
-    count < stock && setCount(count + 1);
-  };
+    count < stock && setCount(count + 1)
+  }
+
   const remove = () => {
-    count > initial && setCount(count-1);
-  };
+    count > initial && setCount(count - 1)
+  }
 
-  return (
 
-      <div>
-          <button className='count' onClick={remove}> - </button>
-        <p className='cuantity'>Añadir {count} de este producto</p>
-        <button className='count' onClick={add}> + </button>
-      </div>
-    );
+return (
+
+  <div>
+      <button className='count' onClick={remove} disabled={count === initial}> - </button>
+    <p className='cuantity'>Añadir {count} de este producto</p>
+    <button className='count' onClick={add} disabled={count === stock}> + </button>
+  </div>
+);
+
+
+// function ItemCount ({stock, initial}) {
+
+//     const [count, setCount] = useState(initial);
+
+//   const add = () => {
+//     count < stock && setCount(count + 1);
+//   };
+//   const remove = () => {
+//     count > initial && setCount(count-1);
+//   };
+
+
 
 
 // useEffect(() => { 
