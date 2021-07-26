@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useState, Link } from 'react'
 import ItemCount from '../itemCount/itemCount'
 
 const ItemDetail = ({ItemToDisplay: item}) => {
@@ -29,7 +29,7 @@ const ItemDetail = ({ItemToDisplay: item}) => {
                 <Link to='/cart' onClick={handleState}>
                 <button onClick={handleState}>Terminar la compra</button>
                 </Link>  
-                <button onClick={handlestate}>Modificar compra</button>              
+                <button onClick={handleState}>Modificar compra</button>              
                 </>
             )}
         </div>

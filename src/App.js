@@ -2,6 +2,7 @@
 import './App.css';
 import { NavBar } from './components/navBar/navBar'
 import ItemListContainer from './components/itemListContainer/itemListContainer'
+import ItemDetail from './components/itemDetail/itemDetail'
 import { BrowserRouter, Switch, Route, Link } from 'react-router-dom'
 import Home from './components/pages/home'
 import Buttons from './components/buttons'
@@ -22,7 +23,7 @@ function App() {
         </Route> */}
 
     <Route path="/category/:catId">
-      <ItemListContainer/>
+      <ItemDetail/>
      
     </Route>
     {/* <div className="App">
