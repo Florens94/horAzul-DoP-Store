@@ -1,16 +1,24 @@
-import React, { Fragment, useState, Link } from 'react'
+import React, { Fragment, useState, Link, useContext } from 'react'
 import ItemCount from '../itemCount/itemCount'
+import { Context } from '../../context/context'
 
 const ItemDetail = ({ItemToDisplay: item}) => {
     const [count, setCount] = useState(1)
-
+    const { addCart, removeCart } = useContext(Context)
     const [finish, setFinish] = useState(false)
 
     const handleState = () => setFinish(finish)
 
+    const handleSend =() => {
+        addCart({...item, quantity: count})
+    }
+
+    const handleRemove = () => {
+        removeCart({item})
+    }
     return (
         <Fragment>
-        <img src={'/' + item.img} alt={item.name} />
+        <img src={item.img} alt={item.name} />
         <div>
             <h1>{item.name}</h1>
             <p>{item.price}</p>
@@ -22,7 +30,7 @@ const ItemDetail = ({ItemToDisplay: item}) => {
                 count={count}
                 setCount={setCount}
                 stock={item.stock}/>
-                            <button>AGREGAR</button>
+                            <button onClick={() =>{handleState(); handleSend()}}>AGREGAR</button>
                 </>
             ) : (
                 <>

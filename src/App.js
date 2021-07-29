@@ -1,17 +1,18 @@
 
 import './App.css';
-import { NavBar } from './components/navBar/navBar'
-import ItemListContainer from './components/itemListContainer/itemListContainer'
+// import { NavBar } from './components/navBar/navBar'
+// import ItemListContainer from './components/itemListContainer/itemListContainer'
 import ItemDetail from './components/itemDetail/itemDetail'
-import { BrowserRouter, Switch, Route, Link } from 'react-router-dom'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import Home from './components/pages/home'
-import Buttons from './components/buttons'
-import {Category} from './components/pages/category'
-
+// import Buttons from './components/buttons'
+// import {Category} from './components/pages/category'
+import { DataProvider } from './context/context'
 
 
 function App() {
   return (
+    <DataProvider>
     <BrowserRouter>
     <Switch>
     {/* <NavBar /> */}
@@ -37,6 +38,7 @@ function App() {
 
 
     </BrowserRouter>
+    </DataProvider>
   );
 }
 
