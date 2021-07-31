@@ -23,6 +23,7 @@ export const Category = () =>  {
     }, [qty])
 
 	return (
+
         <Page id={`category_${categoryName}`}>
 			<Fragment>
 				<h1>

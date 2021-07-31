@@ -11,7 +11,7 @@ function Home() {
         <NavBar />
         {/* <Routes/> */}
       </header>
-      <ItemListContainer greeting='bienvenidxs a la tienda virtual de lxs directores de fotografía'/>
+     
     </div> 
   );
 }
