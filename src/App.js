@@ -8,6 +8,7 @@ import Home from './components/pages/home'
 // import Buttons from './components/buttons'
 // import {Category} from './components/pages/category'
 import { DataProvider } from './context/context'
+import { Cart } from './components/cart/cart'
 
 
 function App() {
@@ -23,9 +24,11 @@ function App() {
           <Category/>
         </Route> */}
 
-    <Route path="/category/:catId">
+    <Route path="/category/:categoryName">
       <ItemDetail/>
-     
+    </Route>
+    <Route path='/cart'>
+      <Cart/>
     </Route>
     {/* <div className="App">
       <header className="App-header">

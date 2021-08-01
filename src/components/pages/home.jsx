@@ -1,7 +1,7 @@
 
 import { NavBar } from '../navBar/navBar'
-import ItemListContainer from '../itemListContainer/itemListContainer'
-import Routes from '../../Routes'
+// import ItemListContainer from '../itemListContainer/itemListContainer'
+
 
 function Home() {
   return (
@@ -9,7 +9,6 @@ function Home() {
       <header className="App-header">
           <p className='appName'>Hora Azul <br/> DoP Store</p>
         <NavBar />
-        {/* <Routes/> */}
       </header>
      
     </div> 

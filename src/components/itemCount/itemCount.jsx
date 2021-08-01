@@ -1,7 +1,8 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './itemCount.css'
 
 const ItemCount = ({initial, stock, count, setCount}) => {
+
   const add = () => {
     count < stock && setCount(count + 1)
   }
