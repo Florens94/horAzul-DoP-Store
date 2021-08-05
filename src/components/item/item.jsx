@@ -1,15 +1,14 @@
-import React from 'react'
-// import { Link } from 'react-router-dom'
+import React, { Fragment } from 'react'
+import { Link } from 'react-router-dom'
 
-export const Item = ({item}) => {
+export const Item = ({lens}) => {
     return (
-        <div>
-            <p>{item.id}</p>
-            <img src={item.img} alt={item.img}/>
-            <strong>{item.title}</strong>
-            <p> detalle: {item.detail}</p>
-            </div>
-
+        <Link to={`/item/${lens.id}`}>
+                     <h2>{lens.name}</h2>
+                     <p>{lens.detail}</p>
+                     <h3>{lens.price}</h3>
+                     <img src={lens.img} alt={lens.name}/>
+        </Link>
     )
 }
 // import ItemCount from '../itemCount/itemCount'

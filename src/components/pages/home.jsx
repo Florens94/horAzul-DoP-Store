@@ -1,6 +1,6 @@
 
 import { NavBar } from '../navBar/navBar'
-// import ItemListContainer from '../itemListContainer/itemListContainer'
+import ItemListContainer from '../itemListContainer/itemListContainer'
 
 
 function Home() {
@@ -10,7 +10,7 @@ function Home() {
           <p className='appName'>Hora Azul <br/> DoP Store</p>
         <NavBar />
       </header>
-     
+     <ItemListContainer/>
     </div> 
   );
 }
