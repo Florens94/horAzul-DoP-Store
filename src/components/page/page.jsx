@@ -1,4 +1,4 @@
-import { NavBar } from '../navBar/navBar'
+import { NavBar } from '../navbar/navBar'
 import {useContext, cartContext} from 'react'
 // import {cartContext} from '../../context/cartContext'
 

@@ -1,5 +1,5 @@
 
-import { NavBar } from '../navBar/navBar'
+import { NavBar } from '../navbar/navBar'
 import ItemListContainer from '../itemListContainer/itemListContainer'
 
 

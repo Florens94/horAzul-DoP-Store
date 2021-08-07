@@ -1,6 +1,6 @@
 
 import './App.css';
-// import { NavBar } from './components/navBar/navBar'
+import { NavBar } from './components/navbar/navBar'
 // import ItemListContainer from './components/itemListContainer/itemListContainer'
 import ItemDetail from './components/itemDetail/itemDetail'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
@@ -16,7 +16,7 @@ function App() {
     <DataProvider>
     <BrowserRouter>
     <Switch>
-    {/* <NavBar /> */}
+    <NavBar />
     <Route exact path="/">
       <Home/>
     </Route>
