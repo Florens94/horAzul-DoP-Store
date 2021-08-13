@@ -1,10 +1,12 @@
+
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import './itemListContainer.css'
 // import ItemCount from '../itemCount/itemCount'
 import ItemList from '../itemList/itemList'
-// import {ItemDetailContainer} from '../itemDetailContainer/itemDetailContainer'
+import {ItemDetailContainer} from '../itemDetailContainer/itemDetailContainer'
 import { database } from '../../firebase/firebase'
+import { Item } from '../item/item'
 
 const ItemListContainer = () => {
     const [displayItems, setDisplayItems] = useState([]);
@@ -36,9 +38,21 @@ const ItemListContainer = () => {
 
     getItems().then((result)=> setDisplayItems(result))
 
-    return <ItemList displayItems = {displayItems}/>
+    // return <ItemList displayItems = {displayItems}/>
+    return (
+        <div>
+  
+          {
+            lenses.lenght > 0 ? (
+               lenses.map((lenses) => (
+               <p>{lenses.title}</p>)
+               )) :(
+            <p></p>)
+          }
+          <Item/>
+        </div>
     
-}
+    )}
 
 export default ItemListContainer;
 

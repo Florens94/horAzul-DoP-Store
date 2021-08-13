@@ -6,7 +6,7 @@ import ItemDetail from './components/itemDetail/itemDetail'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import Home from './components/pages/home'
 // import Buttons from './components/buttons'
-// import {Category} from './components/pages/category'
+import {Category} from './components/pages/category'
 import { DataProvider } from './context/context'
 import { Cart } from './components/cart/cart'
 
@@ -15,8 +15,8 @@ function App() {
   return (
     <DataProvider>
     <BrowserRouter>
-    <Switch>
     <NavBar />
+    <Switch>
     <Route exact path="/">
       <Home/>
     </Route>
@@ -25,7 +25,7 @@ function App() {
         </Route> */}
 
     <Route path="/category/:categoryName">
-      <ItemDetail/>
+      <Category/>
     </Route>
     <Route path='/cart'>
       <Cart/>

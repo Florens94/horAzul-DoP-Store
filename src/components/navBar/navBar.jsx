@@ -6,7 +6,8 @@ import { Link } from 'react-router-dom'
 
 export const NavBar = (props) =>{
     return (
-      <header>
+    <header className="App-header">
+      <p className='appName'>Hora Azul <br/> DoP Store</p>
         <nav className="nav">
           <ul className="links">
             {categories.map((categoria)=>(

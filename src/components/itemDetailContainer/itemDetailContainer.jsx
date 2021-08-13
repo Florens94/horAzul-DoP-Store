@@ -3,7 +3,7 @@ import ItemDetail from '../itemDetail/itemDetail'
 import { useParams } from 'react-router-dom'
 import { lenses } from '../lenses.json'
 
-export const ItemDetailContainer = ()=> {
+export const ItemDetailContainer = () => {
 
 
 const [itemToDisplay, setItemToDisplay] = useState()
@@ -13,7 +13,7 @@ const {id: idParams} = useParams();
 const getSelectedItem = () => {
     return new Promise((resolve) =>{
         setTimeout(()=>{
-            resolve(lenses.find((lens)=> lens.id.toString() === idParams))
+            resolve(lenses.find((item)=> item.id.toString() === idParams))
         }, 2000)
     })
 }

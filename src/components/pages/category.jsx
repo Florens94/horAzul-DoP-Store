@@ -9,8 +9,8 @@ import {Item} from '../item/item'
 
 export const Category = () =>  {
     const {categoryName} = useParams()
-    const products = items.filter((item) => item.category === categoryName)
-    const [suppWithDiscount] = useState (['Tintas'])
+    // const lenses= items.map((item) => item.category === categoryName)
+    const [suppWithDiscount] = useState ([])
     const discount = (categoryName) => suppWithDiscount.some(category => category === categoryName)
     const [qty, setQty] = useState(0)
     const [finish, setFinish] = useState(false)
@@ -30,16 +30,14 @@ export const Category = () =>  {
 					{categoryName.charAt(0).toUpperCase() + categoryName.slice(1)}
 				</h1>
 				<div>
-                    {products.length < 1 ?
-                   <p>PROXIMAMENTE. Estamos actualizando el stock en esta categoría.</p> :
-					products.map((lenses) => (
+
 						<Item
-							key={lenses.name}
-							image={lenses.image}
-							title={lenses.name}
-							price={lenses.price}
+							key={items.name}
+							image={items.image}
+							title={items.name}
+							price={items.price}
 						/>
-					))}
+
 				</div>
 			</Fragment>
         </Page>

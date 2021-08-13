@@ -16,14 +16,14 @@ export const DataProvider = ({children}) => {
     }
 
     const removeFromCart = (receivedLens) =>{
-        let allLenses = cart.filter(item => item.id != receivedLens.id)
+        let allLenses = cart.filter(item => item.id !== receivedLens.id)
 
         setCart(allLenses)
     }
 
     const clearCart = () => setCart([])
 
-    return <Context.Provider value={{ cart, setCart }}>
+    return <Context.Provider value={{ cart, addToCart, setCart, clearCart, removeFromCart }}>
         {children}
     </Context.Provider>
 }
